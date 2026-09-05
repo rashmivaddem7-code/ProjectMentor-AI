@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ProjectMentor AI"
+description = "An AI-powered final-year project mentor that helps students discover personalized ideas, plan implementation, chat with an AI guide, generate documentation, prepare for viva, and track progress."
+version = "1.0.0"
+id = "artifacts/projectmentor-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25180
+
+[services.env]
+PORT = "25180"
+BASE_PATH = "/"
+
+[services.development]
+run = "pnpm --filter @workspace/projectmentor-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/projectmentor-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/projectmentor-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

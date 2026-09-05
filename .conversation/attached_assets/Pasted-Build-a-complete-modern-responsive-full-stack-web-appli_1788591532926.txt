@@ -1,0 +1,1188 @@
+Build a complete, modern, responsive full-stack web application called:
+
+**“ProjectMentor AI – AI Project Idea Generator & Final-Year Project Mentor”**
+
+The purpose of this application is to help final-year college/university students discover, plan, develop, and improve software/AI projects based on their skills, interests, academic specialization, available time, team size, budget, and preferred technologies.
+
+The application should feel like a real production-ready startup product, not a basic student demo.
+
+==================================================
+
+1. CORE OBJECTIVE
+   ==================================================
+
+Create an AI-powered platform where a student can:
+
+1. Create a student profile.
+2. Enter their programming skills.
+3. Enter technical interests.
+4. Select their academic specialization.
+5. Select preferred technologies.
+6. Specify whether they are working individually or in a team.
+7. Specify project duration.
+8. Specify project difficulty.
+9. Specify available budget.
+10. Generate personalized final-year project ideas.
+11. View detailed explanations of each generated project.
+12. Ask an AI mentor questions about a selected project.
+13. Generate project architecture.
+14. Generate required features.
+15. Generate development milestones.
+16. Generate database/schema suggestions.
+17. Generate technology-stack recommendations.
+18. Generate implementation guidance.
+19. Generate testing strategies.
+20. Generate possible future enhancements.
+21. Generate project documentation content.
+22. Save favorite projects.
+23. Compare multiple project ideas.
+24. Track project development progress.
+25. Regenerate/improve an existing project idea.
+
+==================================================
+2. APPLICATION NAME AND BRANDING
+================================
+
+Application name:
+
+**ProjectMentor AI**
+
+Tagline:
+
+**“From Idea to Implementation — Your AI Final-Year Project Mentor.”**
+
+Create a professional logo/text-based branding using:
+
+ProjectMentor AI
+
+Use a modern technology/AI visual identity.
+
+The interface should look similar in quality to a modern SaaS/AI product.
+
+Do NOT make the interface look like a simple college project.
+
+==================================================
+3. TECHNOLOGY REQUIREMENTS
+==========================
+
+Use a modern web application architecture.
+
+Preferred stack:
+
+Frontend:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Modern responsive UI
+* Lucide icons or another clean icon library
+
+Backend:
+
+* Use the appropriate backend/API architecture supported by Google AI Studio.
+* Keep the code modular and maintainable.
+
+AI:
+
+* Integrate Google Gemini API.
+* Use Gemini for project generation, project analysis, mentoring, recommendations, and documentation generation.
+
+Data:
+
+* Use a persistent database if supported.
+* If database integration is not immediately available, create a clean data-access layer that can later be connected to Firebase/Firestore.
+
+Authentication:
+
+* Provide a clean authentication architecture.
+* If authentication is available, support Google/email authentication.
+* If authentication cannot be configured automatically, implement a demo/local authentication flow and clearly separate it from production authentication.
+
+==================================================
+4. LANDING PAGE
+===============
+
+Create a beautiful landing page.
+
+Hero section:
+
+Headline:
+
+“Turn Your Skills Into Your Next Great Project.”
+
+Subtitle:
+
+“ProjectMentor AI helps final-year students discover personalized project ideas, choose the right technologies, create development plans, and build projects with AI-powered guidance.”
+
+Primary button:
+
+“Generate Project Ideas”
+
+Secondary button:
+
+“Explore Features”
+
+Add a visually attractive AI/project illustration using CSS/UI elements rather than requiring external image assets.
+
+Include sections:
+
+* How It Works
+* Key Features
+* Why ProjectMentor AI?
+* Project Categories
+* AI Mentor
+* Development Roadmap
+* Testimonials/demo student feedback
+* FAQ
+* Call to Action
+* Footer
+
+==================================================
+5. STUDENT ONBOARDING
+=====================
+
+When the student clicks “Generate Project Ideas”, show a multi-step onboarding wizard.
+
+Step 1 — Student Profile
+
+Fields:
+
+* Name
+* Degree
+* University
+* Academic specialization
+* Current semester/year
+
+Specializations:
+
+* Computer Science
+* Artificial Intelligence & Machine Learning
+* Data Science
+* Information Technology
+* Cyber Security
+* Electronics
+* Software Engineering
+* Other
+
+Step 2 — Skills
+
+Allow students to select multiple skills.
+
+Examples:
+
+Programming:
+
+* Python
+* Java
+* C
+* C++
+* JavaScript
+* TypeScript
+* C#
+* PHP
+
+AI/ML:
+
+* Machine Learning
+* Deep Learning
+* NLP
+* Computer Vision
+* Generative AI
+* LLMs
+
+Data:
+
+* SQL
+* MySQL
+* PostgreSQL
+* Pandas
+* NumPy
+* Power BI
+* Tableau
+
+Web:
+
+* HTML
+* CSS
+* React
+* Angular
+* Node.js
+* Express
+* MongoDB
+
+Other:
+
+* Cloud
+* DevOps
+* Cyber Security
+* IoT
+* Blockchain
+
+Allow custom skills.
+
+Step 3 — Interests
+
+Allow students to select interests:
+
+* AI
+* Machine Learning
+* Generative AI
+* Healthcare
+* Finance
+* Education
+* Agriculture
+* Cyber Security
+* Smart Cities
+* Sustainability
+* E-commerce
+* Social Impact
+* Robotics
+* IoT
+* Data Analytics
+* Computer Vision
+* NLP
+* Productivity
+* Entertainment
+* Other
+
+Allow custom interests.
+
+Step 4 — Project Preferences
+
+Ask:
+
+Project type:
+
+* Software
+* AI/ML
+* Data Science
+* Web Application
+* Mobile Application
+* IoT
+* Cyber Security
+* Hybrid
+
+Difficulty:
+
+* Beginner
+* Intermediate
+* Advanced
+* Research-oriented
+
+Team size:
+
+* Individual
+* 2 members
+* 3 members
+* 4+ members
+
+Duration:
+
+* 1 month
+* 2 months
+* 3 months
+* 4–6 months
+* 6+ months
+
+Budget:
+
+* Free / ₹0
+* Under ₹2,000
+* ₹2,000–₹5,000
+* ₹5,000–₹10,000
+* Above ₹10,000
+
+Step 5 — Career Goal
+
+Ask the student what role they want to target:
+
+* Software Developer
+* Data Analyst
+* Data Scientist
+* AI/ML Engineer
+* Full Stack Developer
+* Cyber Security Analyst
+* Cloud Engineer
+* Researcher
+* Product Engineer
+
+Use this information when generating project recommendations.
+
+==================================================
+6. AI PROJECT IDEA GENERATOR
+============================
+
+After onboarding, send the student's information to Gemini.
+
+Generate 5 highly personalized project ideas.
+
+DO NOT generate generic ideas such as:
+
+* Simple calculator
+* Basic library management
+* Basic student management system
+* Basic weather app
+* Basic to-do application
+
+Ideas should be:
+
+* Practical
+* Innovative
+* Technically feasible
+* Suitable for final-year students
+* Relevant to current industry trends
+* Suitable for the student's skills
+* Aligned with the student's career goal
+* Achievable within their selected duration and budget
+
+For every idea provide:
+
+1. Project title
+2. One-line pitch
+3. Problem statement
+4. Proposed solution
+5. Why this project is useful
+6. Innovation level
+7. Difficulty
+8. Estimated development time
+9. Estimated cost
+10. Recommended technology stack
+11. Required skills
+12. AI/ML components if applicable
+13. Expected users
+14. Real-world applications
+15. Resume value
+16. Research potential
+17. Scalability potential
+
+Assign scores:
+
+* Skill Match Score
+* Interest Match Score
+* Career Relevance Score
+* Feasibility Score
+* Innovation Score
+* Resume Value Score
+
+Calculate an overall recommendation score.
+
+Display projects as attractive cards.
+
+Each card should have buttons:
+
+“View Details”
+
+“Ask AI Mentor”
+
+“Save”
+
+“Compare”
+
+“Improve Idea”
+
+==================================================
+7. PROJECT DETAIL PAGE
+======================
+
+When a student selects a project, create a complete project blueprint.
+
+Sections:
+
+A. Project Overview
+
+B. Problem Statement
+
+C. Objectives
+
+D. Existing System
+
+E. Proposed System
+
+F. Key Features
+
+G. Functional Requirements
+
+H. Non-functional Requirements
+
+I. User Roles
+
+J. Technology Stack
+
+K. System Architecture
+
+L. Data Flow
+
+M. Database Design
+
+N. API Design
+
+O. AI/ML Pipeline
+
+P. Development Roadmap
+
+Q. Testing Strategy
+
+R. Deployment Strategy
+
+S. Security Considerations
+
+T. Future Enhancements
+
+U. Research Opportunities
+
+V. Expected Outcomes
+
+W. Resume Description
+
+X. Viva Questions
+
+==================================================
+8. AI ARCHITECTURE GENERATOR
+============================
+
+Create an “Architecture” tab.
+
+When clicked, Gemini should generate a system architecture based on the selected project.
+
+Show:
+
+Frontend
+↓
+Backend/API
+↓
+Database
+↓
+AI/ML Model
+↓
+External APIs
+↓
+Cloud/Deployment
+
+Create a visually understandable architecture diagram using HTML/CSS/SVG where possible.
+
+Do not simply display raw Mermaid code.
+
+Also explain each architecture component.
+
+==================================================
+9. FEATURE GENERATOR
+====================
+
+Create an AI-powered “Feature Planner”.
+
+The user can enter:
+
+“I want to build this project but I don't know what features to add.”
+
+Gemini should categorize features into:
+
+MVP Features
+↓
+Core Features
+↓
+Advanced Features
+↓
+AI Features
+↓
+Future Features
+
+Each feature should contain:
+
+* Feature name
+* Description
+* Priority
+* Estimated development time
+* Required technology
+* Dependencies
+
+Allow:
+
+“Add Feature”
+
+“Remove Feature”
+
+“Improve Feature”
+
+“Generate More Features”
+
+==================================================
+10. DEVELOPMENT ROADMAP
+=======================
+
+Create an interactive project roadmap.
+
+Example:
+
+Phase 1:
+Requirement Analysis
+
+Phase 2:
+System Design
+
+Phase 3:
+Database Design
+
+Phase 4:
+Backend Development
+
+Phase 5:
+Frontend Development
+
+Phase 6:
+AI/ML Integration
+
+Phase 7:
+Testing
+
+Phase 8:
+Deployment
+
+Phase 9:
+Documentation
+
+Phase 10:
+Final Presentation
+
+For each phase show:
+
+* Tasks
+* Estimated time
+* Dependencies
+* Completion status
+
+Allow students to mark tasks:
+
+Not Started
+In Progress
+Completed
+
+Display overall project progress as a percentage.
+
+==================================================
+11. AI PROJECT MENTOR / CHAT
+============================
+
+Create a dedicated AI Mentor page.
+
+The AI mentor should understand the currently selected project.
+
+Chat examples:
+
+Student:
+“How should I start this project?”
+
+AI:
+Provides step-by-step guidance.
+
+Student:
+“What database should I use?”
+
+AI:
+Explains suitable choices.
+
+Student:
+“I am getting an error in my implementation.”
+
+AI:
+Helps debug the problem.
+
+Student:
+“How can I make this project more innovative?”
+
+AI:
+Suggests improvements.
+
+Student:
+“What questions can be asked in my viva?”
+
+AI:
+Generates viva questions and answers.
+
+Student:
+“Can this project become a research paper?”
+
+AI:
+Explains research possibilities.
+
+The AI mentor should NOT blindly provide incorrect information.
+
+It should explain assumptions and recommend verifying critical technical decisions.
+
+==================================================
+12. IDEA IMPROVEMENT ENGINE
+===========================
+
+Add an “Improve My Idea” feature.
+
+User enters an existing project idea.
+
+Example:
+
+“Smart Attendance System”
+
+Gemini should analyze it and return:
+
+* Current idea assessment
+* Problems with the idea
+* Innovation opportunities
+* AI opportunities
+* Missing features
+* Scalability improvements
+* Security improvements
+* Research possibilities
+* Suggested new title
+* Improved project architecture
+* Improved feature list
+
+Show a before/after comparison.
+
+==================================================
+13. PROJECT COMPARISON
+======================
+
+Allow students to select up to 3 project ideas.
+
+Create a comparison screen.
+
+Compare:
+
+* Difficulty
+* Development time
+* Cost
+* Skill match
+* Career relevance
+* Innovation
+* Resume value
+* Research potential
+* Scalability
+* AI complexity
+
+At the bottom show:
+
+“AI Recommendation”
+
+Explain which project is most suitable and WHY.
+
+==================================================
+14. FAVORITES / SAVED PROJECTS
+==============================
+
+Create a “My Projects” dashboard.
+
+Students should be able to:
+
+* Save generated ideas
+* Remove ideas
+* Open project blueprints
+* Track project progress
+* Continue AI mentor conversations
+* Compare saved ideas
+
+==================================================
+15. PROJECT DOCUMENTATION GENERATOR
+===================================
+
+Create a Documentation Generator.
+
+Allow the student to generate:
+
+* Abstract
+* Introduction
+* Problem Statement
+* Objectives
+* Literature Review outline
+* Methodology
+* System Architecture explanation
+* Modules
+* Results section template
+* Conclusion
+* Future Scope
+* References structure
+
+Important:
+
+Do not fabricate research papers, citations, experimental results, or claims.
+
+Clearly mark generated content as a draft that should be verified and customized by the student.
+
+Allow exporting/copying generated content.
+
+==================================================
+16. VIVA PREPARATION
+====================
+
+Create a “Viva Coach” feature.
+
+Generate questions categorized as:
+
+Basic Questions
+Technical Questions
+Architecture Questions
+Database Questions
+AI/ML Questions
+Implementation Questions
+Testing Questions
+Security Questions
+Future Scope Questions
+Challenging Questions
+
+For each question provide:
+
+* Question
+* Suggested answer
+* Key points
+* Difficulty
+
+Also include a “Mock Viva” mode where Gemini asks one question at a time and evaluates the student's answer.
+
+==================================================
+17. DASHBOARD
+=============
+
+Create a professional dashboard.
+
+Display:
+
+Welcome message
+
+Project ideas generated:
+XX
+
+Saved projects:
+XX
+
+Active projects:
+XX
+
+Completed tasks:
+XX%
+
+Current project:
+
+Project name
+Progress bar
+Next task
+Deadline
+
+Quick actions:
+
+Generate Ideas
+Ask Mentor
+Improve Idea
+Generate Architecture
+Generate Documentation
+Practice Viva
+
+==================================================
+18. PROJECT CATEGORIES
+======================
+
+Create an explore page with categories:
+
+AI & Machine Learning
+Data Science
+Generative AI
+Healthcare
+FinTech
+EdTech
+Cyber Security
+Agriculture
+IoT
+Smart Cities
+Sustainability
+Computer Vision
+NLP
+Web Development
+Mobile Development
+Cloud Computing
+
+Clicking a category should show example project ideas.
+
+==================================================
+19. SEARCH AND FILTER
+=====================
+
+Allow users to search project ideas.
+
+Filters:
+
+Category
+Difficulty
+Technology
+Duration
+Budget
+Team Size
+AI Required
+Research Potential
+Career Role
+
+==================================================
+20. UI/UX REQUIREMENTS
+======================
+
+Create a premium modern interface.
+
+Requirements:
+
+* Responsive desktop/tablet/mobile
+* Clean navigation sidebar
+* Modern cards
+* Rounded components
+* Proper spacing
+* Professional typography
+* Accessible color contrast
+* Loading states
+* Skeleton loaders
+* Toast notifications
+* Empty states
+* Error states
+* Confirmation dialogs
+* Smooth transitions
+* Hover effects
+
+Use a professional AI SaaS style.
+
+Navigation:
+
+Dashboard
+Generate Ideas
+Explore
+My Projects
+AI Mentor
+Roadmap
+Architecture
+Documentation
+Viva Coach
+Settings
+
+==================================================
+21. DARK MODE
+=============
+
+Implement:
+
+Light Mode
+Dark Mode
+
+Remember the user's preference.
+
+==================================================
+22. GEMINI AI INTEGRATION
+=========================
+
+Use Gemini as the core intelligence.
+
+Create separate AI functions/prompts for:
+
+generateProjectIdeas()
+analyzeProject()
+generateFeatures()
+generateArchitecture()
+generateRoadmap()
+generateDocumentation()
+improveProject()
+generateVivaQuestions()
+evaluateVivaAnswer()
+mentorChat()
+
+Do NOT place sensitive API keys directly in frontend code.
+
+Use environment variables/secrets.
+
+Create clear configuration instructions for Gemini API.
+
+==================================================
+23. AI RESPONSE STRUCTURE
+=========================
+
+Where structured output is required, ask Gemini to return predictable JSON matching a defined schema.
+
+Validate AI responses before rendering.
+
+Handle:
+
+* Invalid JSON
+* Empty responses
+* API errors
+* Rate limits
+* Network failures
+* Missing fields
+
+Display user-friendly error messages.
+
+==================================================
+24. DEMO DATA
+=============
+
+Include realistic demo projects so the application does not look empty on first launch.
+
+Example projects:
+
+1. AI-Powered Medication Adherence & Risk Monitoring System
+
+2. Intelligent Energy Consumption Forecasting Platform
+
+3. AI-Based Resume Analysis and Job Matching System
+
+4. Smart Campus Assistant using Generative AI
+
+5. Computer Vision Based Industrial Safety Monitoring
+
+6. Personalized Learning Recommendation System
+
+7. AI-Based Crop Disease Detection
+
+8. Fraud Detection and Financial Risk Analysis Platform
+
+9. AI Customer Churn Prediction and Lifetime Value Engine
+
+10. Context-Aware Student Productivity Assistant
+
+These should only be sample/demo projects; the AI generator must create personalized ideas dynamically.
+
+==================================================
+25. SECURITY
+============
+
+Implement basic security best practices.
+
+* Never expose API keys in client-side code.
+* Validate user input.
+* Sanitize generated content where necessary.
+* Use secure authentication architecture.
+* Protect API endpoints.
+* Add rate-limit handling.
+* Avoid storing unnecessary personal information.
+
+==================================================
+26. PERFORMANCE
+===============
+
+Optimize the application for:
+
+* Fast loading
+* Lazy loading where appropriate
+* Efficient API calls
+* Avoiding unnecessary Gemini requests
+* Caching appropriate generated data
+* Responsive UI
+
+==================================================
+27. ERROR HANDLING
+==================
+
+Every AI feature must handle errors gracefully.
+
+Examples:
+
+“Unable to generate ideas right now. Please try again.”
+
+“Gemini API request failed.”
+
+“Please check your API configuration.”
+
+“Your request is too large. Please simplify your input.”
+
+Never show raw stack traces to users.
+
+==================================================
+28. RESPONSIVE DESIGN
+=====================
+
+Desktop:
+
+Sidebar + main content.
+
+Tablet:
+
+Collapsible sidebar.
+
+Mobile:
+
+Bottom navigation or hamburger navigation.
+
+All cards, forms, dashboards, chat interfaces, and project roadmaps must work properly on mobile.
+
+==================================================
+29. PROJECT QUALITY
+===================
+
+Important:
+
+Do not create a simple static frontend.
+
+The application must have working interactions.
+
+Buttons should perform real actions.
+
+Forms should collect real data.
+
+AI features should call Gemini.
+
+Saved projects should persist.
+
+Project progress should update.
+
+The application should have reusable components.
+
+Separate UI components, services, AI logic, types, and data models.
+
+Avoid putting the entire application in one huge file.
+
+Use clean folder/module structure.
+
+==================================================
+30. FINAL-YEAR PROJECT QUALITY
+==============================
+
+This application itself is intended to be submitted as a final-year project.
+
+Therefore, include features demonstrating:
+
+* Generative AI
+* Recommendation system
+* Natural language interaction
+* User profiling
+* Personalized recommendations
+* AI-assisted planning
+* Data persistence
+* Full-stack development
+* Responsive UI
+* Software architecture
+* Authentication
+* CRUD operations
+* API integration
+* Error handling
+* Security
+* Analytics
+
+Make the project technically impressive but still realistically implementable by final-year students.
+
+==================================================
+31. ANALYTICS
+=============
+
+Create a simple analytics page.
+
+Show:
+
+Projects generated
+Projects saved
+Most selected categories
+Most popular technologies
+Average project difficulty
+Project completion rate
+
+Use charts where appropriate.
+
+==================================================
+32. SETTINGS
+============
+
+Settings page should contain:
+
+Profile
+AI preferences
+Theme
+Notification preferences
+Preferred technologies
+Career goal
+Project difficulty preference
+Account settings
+
+==================================================
+33. DEMO MODE
+=============
+
+If Gemini API is not configured, the application should still run using mock/demo AI responses.
+
+Clearly indicate:
+
+“Demo AI Mode”
+
+Once Gemini API is configured, automatically use the real Gemini API.
+
+==================================================
+34. README / DOCUMENTATION
+==========================
+
+Generate a comprehensive README containing:
+
+Project title
+Problem statement
+Project objectives
+Features
+Technology stack
+Architecture
+Folder structure
+Installation instructions
+Environment variables
+Gemini API setup
+Database setup
+How to run locally
+How to deploy
+Future enhancements
+
+Also include a section:
+
+“Final-Year Project Presentation”
+
+containing:
+
+Project motivation
+Problem
+Existing system
+Proposed system
+Architecture
+Technologies
+AI integration
+Expected outcome
+Future scope
+
+==================================================
+35. IMPORTANT DEVELOPMENT INSTRUCTION
+=====================================
+
+First analyze the complete requirements above.
+
+Then create the application systematically.
+
+Do not stop after generating the landing page.
+
+Implement the actual application flow:
+
+Landing Page
+→ Student Onboarding
+→ Personalized AI Generation
+→ Project Results
+→ Project Details
+→ Architecture
+→ Feature Planner
+→ Roadmap
+→ AI Mentor
+→ Documentation
+→ Viva Coach
+→ Saved Projects
+→ Dashboard
+
+Make sure navigation between all pages works.
+
+Use realistic sample data.
+
+Ensure there are no broken buttons or placeholder pages.
+
+If a feature cannot be fully implemented because an external service requires credentials, create a clean integration point and provide setup instructions rather than pretending the integration works.
+
+Prioritize a working end-to-end MVP first, then improve visual quality and advanced features.
+
+At the end, provide:
+
+1. Complete project structure
+2. Setup instructions
+3. Required environment variables
+4. Gemini API configuration instructions
+5. How to run the application
+6. How to test every major feature
+7. Suggestions for future improvements
+
+Build the project now.
